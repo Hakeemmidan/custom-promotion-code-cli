@@ -10,11 +10,10 @@ ACTIVATE = 'activate'
 GET_CODE = 'get_code'
 
 @options = Set.new([ADD, ACTIVATE, GET_CODE])
+@json = JSONHash.new
+@json = @json.reload('data.json')
 
 def main()
-  json = JSONHash.new
-  json = json.reload('data.json')
-
   print_seperator()
   puts "What would you like to do? Options:"; print_main_options()
   command = get_input()
@@ -26,15 +25,15 @@ def main()
 
   case command
   when ADD
-    add(json)
+    add()
   when ACTIVATE
-    activate(json)
+    activate()
   when GET_CODE
-    get_code(json)
+    get_code()
   end
 
   print_seperator()
-  json.save('data.json')
+  @json.save('data.json')
   puts 'Operation successful! ✔️'
   puts ''
 end

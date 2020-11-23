@@ -2,7 +2,6 @@
 require 'json'
 
 class JSONHash
-  
   def self.from(file)
     self.new.load(file)
   end
@@ -42,5 +41,4 @@ class JSONHash
   def to_json
     @h.to_json
   end
-
 end
