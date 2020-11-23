@@ -1,9 +1,12 @@
 # class source: https://stackoverflow.com/a/9083443/7974948 
+require 'json'
+
 class JSONHash
-  require 'json'
+  
   def self.from(file)
     self.new.load(file)
   end
+
   def initialize(h={})
     @h=h
   end
