@@ -34,12 +34,12 @@ def create_prm_code(name)
   return code
 end
 ```
-The more you increease range of the sample size (i.e. `sample(n)`), the harder
+The more you increase range of the sample size (i.e. `sample(n)`), the harder
 it would be to crack your promotion code
 
-`chars` has 92 unique characters and includes uppercase/lower letters, numbers, and special chars (not all possible special characters of course)
+`chars` has 92 unique characters and includes upper-case/lower-case letters, numbers, and special characters (not all possible special characters of course)
   
-Through testing on [security.org](www.security.org), I found that it typically takes 10k+ years to crack these codes. But this is not a guarntee. You may want to [test it](https://www.security.org/how-secure-is-my-password/) yourself as well
+Through testing on [security.org](www.security.org), I found that it typically takes 10k+ years to crack these codes. But this is not a guarantee. You may want to [test it](https://www.security.org/how-secure-is-my-password/) yourself as well
 
 
 ## JSON Data Structure
