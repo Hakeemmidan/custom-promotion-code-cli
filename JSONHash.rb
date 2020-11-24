@@ -1,4 +1,4 @@
-# class source: https://stackoverflow.com/a/9083443/7974948 
+# source: https://stackoverflow.com/a/9083443/7974948 
 require 'json'
 
 class JSONHash
