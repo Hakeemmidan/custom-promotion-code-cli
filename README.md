@@ -49,3 +49,6 @@ Through testing on [security.org](www.security.org), I found that it typically t
   "activated": <Boolean>
 }
 ```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
