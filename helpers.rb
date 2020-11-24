@@ -33,7 +33,7 @@ def activate()
     return puts "User already activated" 
   end
 
-  @json[name]['activated'] = true
+  @json[name]["activated"] = true
 end
 
 def get_code()
