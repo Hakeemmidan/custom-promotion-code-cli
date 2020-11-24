@@ -1,5 +1,4 @@
 require 'set'
-require 'digest'
 require 'readline'
 require_relative './JSONHash.rb'
 require_relative './helpers.rb'
@@ -38,11 +37,11 @@ def main()
   puts ''
   puts 'Would you like to do another operation? (Y/N)'
   
-  answer = get_input()
+  answer = get_yes_or_no()
 
   if answer == 'y'
     main()
-  else
+  elsif answer == 'n'
     puts 'Goodbye!'
   end
 end

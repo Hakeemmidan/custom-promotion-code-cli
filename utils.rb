@@ -20,16 +20,11 @@ def get_name()
 
   puts "'#{name}'? (Y/N)"
   
-  answer = get_input()
-  
-  until answer == 'y' || answer == 'n'
-    puts "Please enter 'Y' or 'N'"
-    answer = get_input()
-  end
+  answer = get_yes_or_no()
 
   if answer == 'y'
     name
-  else
+  elsif answer == 'n'
     get_name()
   end
 end
@@ -52,6 +47,17 @@ def get_input()
   return line.downcase.strip
 end
 
+def get_yes_or_no()
+  answer = get_input()
+  
+  until answer == 'y' || answer == 'n'
+    puts "Please enter 'Y' or 'N'"
+    answer = get_input()
+  end
+
+  return answer
+end
+
 def print_yellow(str)
   return "\e[33m#{str}\e[0m"
 end
@@ -61,12 +67,11 @@ def format_name(name)
 end
 
 def create_prm_code(name)
-  # Should take more than 1 century to crack (just counting hash section in 2020)
-  sec1 = ('0'..'z').to_a.shuffle.join('') # 75 chars
-  sec2 = ('0'..'z').to_a.shuffle.join('')
+  chars = ('!'..'~').to_a # 92 uniq chars
+  chars[1] = 'A' ; chars[59] = 'B' # Removing chars that may cause form failure
 
-  hash = Digest::SHA2.new(512).hexdigest(sec1 + sec2)
-  code = name.split(' ')[0] + name.split(' ')[1][0] + '-' + hash[0..11]
+  code = [*chars, *chars].sample(12).join('')
+  code = name.split(' ')[0] + name.split(' ')[1][0] + '-' + code
 
   return code
 end
