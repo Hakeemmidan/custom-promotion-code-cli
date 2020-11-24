@@ -15,11 +15,11 @@ GET_CODE = 'get_code'
 
 def main()
   print_seperator()
-  puts "What would you like to do? Options:"; print_main_options()
+  puts "What would you like to do? Options:"; print_options()
   command = get_input()
 
   until @options.include?(command)
-    puts "The only commands avilable are"; print_main_options()
+    puts "The only commands avilable are"; print_options()
     command = get_input()
   end
 
@@ -36,6 +36,15 @@ def main()
   @json.save('data.json')
   puts 'Operation successful! ✔️'
   puts ''
+  puts 'Would you like to do another operation? (Y/N)'
+  
+  answer = get_input()
+
+  if answer == 'y'
+    main()
+  else
+    puts 'Goodbye!'
+  end
 end
 
 ### Setup READLINE start ###

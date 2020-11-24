@@ -5,12 +5,10 @@ def add()
     print_seperator()
     puts "#{name} is already added"
 
-    return "Promo code: #{@json[name]['code']}"
+    return puts "Promo code: " + print_yellow(@json[name]['code'])
   end
   
-  # hashing just to make it hard to guess
-  hash = Digest::SHA2.new(512).hexdigest('Par is fantastic ' + name + ' and orcas are cool')
-  code = name.split(' ')[0] + name.split(' ')[1][0] + '-' + hash[0..7]
+  code = create_prm_code(name)
 
   @json[name] = {
     "code": code,
@@ -19,7 +17,7 @@ def add()
   
   print_seperator()
   puts "User added! ✔️"
-  puts "Promo code: #{code}"
+  puts "Promo code: " + print_yellow(code)
 end
 
 def activate()
@@ -47,5 +45,5 @@ def get_code()
   end
   
   print_seperator()
-  puts "Promo code: #{@json[name]['code']}"
+  puts "Promo code: " + print_yellow(@json[name]['code'])
 end
