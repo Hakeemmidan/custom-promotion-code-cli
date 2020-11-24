@@ -20,7 +20,8 @@ ruby main.rb
   - Smaller repeated functions such `get_name()` and `print_seperator()`
 - `data.json`
   - Where promotion code information gets stored
-  - `.gitignore`d for your safety
+  - Changes to it not tracked by `git` for your safety
+    - Done through running `git update-index --skip-worktree <file-name>`
 
 ## Hashing Algorithm
 ```Ruby
