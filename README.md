@@ -1,4 +1,5 @@
-Customized promo code generator that maps a name to a specific promo code
+# Custom Promotion Code Generator
+Customized promotion code generator that maps a name to a specific promotion code
 
 Built with native Ruby code (no external gems)
 
@@ -18,7 +19,8 @@ ruby main.rb
 - `utils.rb`
   - Smaller repeated functions such `get_name()` and `print_seperator()`
 - `data.json`
-  - Where promotion code info gets stored
+  - Where promotion code information gets stored
+  - `.gitignore`d for your safety
 
 ## Hashing Algorithm
 ```Ruby
