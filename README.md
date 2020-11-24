@@ -45,8 +45,8 @@ Through testing on [security.org](www.security.org), I found that it typically t
 ## JSON Data Structure
 ```JSON
 "<FirstName LastName>": {
-  "code": /* String: Generated code */,
-  "activated": /* Boolean */
+  "code": "String: Generated code",
+  "activated": "Boolean"
 }
 ```
 
