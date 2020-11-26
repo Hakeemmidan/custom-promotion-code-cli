@@ -23,7 +23,7 @@ ruby main.rb
   - Changes to it not tracked by `git` for your safety
     - Done through running `git update-index --skip-worktree <file-name>`
 
-## Hashing Algorithm
+## Promotion Code Generation Algorithm
 ```Ruby
 def create_prm_code(name)
   chars = ('!'..'~').to_a # 92 uniq chars
