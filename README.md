@@ -35,7 +35,7 @@ def create_prm_code(name)
   return code
 end
 ```
-The more you increase range of the sample size (i.e. `sample(n)`), the harder
+The more you increase the sample size (i.e. `sample(n)`), the harder
 it would be to crack your promotion code
 
 `chars` has 92 unique characters and includes upper-case/lower-case letters, numbers, and special characters (not all possible special characters of course)

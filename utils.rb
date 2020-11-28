@@ -42,9 +42,9 @@ end
 
 def get_input()
   puts ''
-  line = Readline.readline('=> ', true)
+  answer = Readline.readline('=> ', true)
 
-  return line.downcase.strip
+  return answer.downcase.strip
 end
 
 def get_yes_or_no()

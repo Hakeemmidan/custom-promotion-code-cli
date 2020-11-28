@@ -51,7 +51,6 @@ LIST = @options.to_a.sort
 
 comp = proc { |s| LIST.grep(/^#{Regexp.escape(s)}/) }
 
-Readline.completion_append_character = " "
 Readline.completion_proc = comp
 ### Setup READLINE end ###
 
