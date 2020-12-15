@@ -17,7 +17,7 @@ ruby main.rb
     - `activate()`
     - `get_code()`
 - `utils.rb`
-  - Smaller repeated functions such `get_name()` and `print_seperator()`
+  - Smaller repeated functions such as `get_name()` and `print_seperator()`
 - `data.json`
   - Where promotion code information gets stored
   - Changes to it not tracked by `git` for your safety
@@ -27,7 +27,7 @@ ruby main.rb
 ```Ruby
 def create_prm_code(name)
   chars = ('!'..'~').to_a # 92 uniq chars
-  chars[1] = 'A' ; chars[59] = 'B' # Removing chars that may cause form failure
+  chars[1] = 'A' ; chars[59] = 'B' # Removing chars that may cause form failure ("\"" and "\\")
 
   code = [*chars, *chars].sample(12).join('')
   code = name.split(' ')[0] + name.split(' ')[1][0] + '-' + code
@@ -38,7 +38,7 @@ end
 The more you increase the sample size (i.e. `sample(n)`), the harder
 it would be to crack your promotion code
 
-`chars` has 92 unique characters and includes upper-case/lower-case letters, numbers, and special characters (not all possible special characters of course)
+`chars` has 92 unique characters and includes upper-case/lower-case letters, numbers, and some special characters
   
 Through testing on [security.org](www.security.org), I found that it typically takes 10k+ years to crack these codes. But this is not a guarantee. You may want to [test it](https://www.security.org/how-secure-is-my-password/) yourself as well
 
