@@ -3,6 +3,10 @@ Customized promotion code generator that maps a name to a specific promotion cod
 
 Built with native Ruby code (no external gems)
 
+<div align="center">
+  <img src="demo_picture.png" alt="Demo" width="637"/>
+</div>
+
 ## Run
 ```
 ruby main.rb
