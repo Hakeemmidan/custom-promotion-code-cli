@@ -12,7 +12,7 @@ Built with native Ruby code (no external gems)
 ruby main.rb
 ```
 
-## File Anatomy
+## File Structure
 - `main.rb`
   - Main script
 - `helpers.rb`
@@ -44,7 +44,7 @@ it would be to crack your promotion code
 
 `chars` has 92 unique characters and includes upper-case/lower-case letters, numbers, and some special characters
   
-Through testing on [security.org](www.security.org), I found that it typically takes 10k+ years to crack these codes. But this is not a guarantee. You may want to [test it](https://www.security.org/how-secure-is-my-password/) yourself as well
+Through testing on [security.org](https://www.security.org), I found that it typically takes 10k+ years to crack these codes. But this is not a guarantee. You may want to [test it](https://www.security.org/how-secure-is-my-password/) yourself as well
 
 
 ## JSON Data Structure
